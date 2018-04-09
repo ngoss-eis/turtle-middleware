@@ -1,0 +1,31 @@
+{
+  "name": "viewer-pers-middleware",
+  "description": "",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NGoss/viewer-pers-middleware.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NGoss/viewer-pers-middleware/issues"
+  },
+  "homepage": "https://github.com/NGoss/viewer-pers-middleware#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0",
+    "mysql2": "^1.5.3",
+    "npm": "^5.8.0"
+  }
+}
