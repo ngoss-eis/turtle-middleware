@@ -32,4 +32,4 @@ router.use('/notes', _notes2.default.routes());
 
 app.use(router.routes());
 
-app.listen(3000);
+app.listen(80);
