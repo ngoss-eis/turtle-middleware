@@ -3,10 +3,10 @@ import mysql from 'mysql2/promise'
 
 var getDb = async () => {
 	return await mysql.createConnection({
-	  host     : 'notes.ccrnjb6da1jf.us-east-1.rds.amazonaws.com',
+	  host     : 'pers-db.ccrnjb6da1jf.us-east-1.rds.amazonaws.com',
 	  user     : 'admin',
 	  password : 'Pass!word1',
-	  database : 'pers_notes'
+	  database : 'pers_db'
 	});
 }
 

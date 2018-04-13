@@ -18,4 +18,4 @@ router.use('/notes', Notes.routes())
 
 app.use(router.routes())
 
-app.listen(80)
+app.listen(3000)
