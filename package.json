@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/NGoss/viewer-pers-middleware#readme",
   "dependencies": {
+    "@koa/cors": "2",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-polyfill": "^6.26.0",

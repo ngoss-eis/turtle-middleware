@@ -2,12 +2,14 @@ import 'babel-polyfill'
 import Router from 'koa-router'
 import Koa from 'koa'
 import bodyParser from 'koa-bodyparser'
+import cors from '@koa/cors'
 
 import Notes from './controllers/notes'
 
 const app = new Koa()
 const router = new Router()
 app.use(bodyParser())
+app.use(cors())
 
 
 router.get('/', (ctx, next) => {

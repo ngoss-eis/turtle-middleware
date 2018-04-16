@@ -29,4 +29,10 @@ notesRouter.delete('/:id', async (ctx, next) => {
 	})
 })
 
+notesRouter.put('/:id', async (ctx, next) => {
+	await db.updateNote(ctx.params.id, ctx.request.body.content, (statusCode) => {
+		ctx.response.status = statusCode
+	})
+})
+
 export default notesRouter
