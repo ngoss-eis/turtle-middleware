@@ -13,7 +13,7 @@ var getDb = async () => {
 
 const getNotesForUser = async (uid, callback) => {
 	const db = await getDb()
-	const [rows, fields] = await db.execute(`SELECT content, page FROM notes WHERE uid=${uid}`)
+	const [rows, fields] = await db.execute(`SELECT id, content, page FROM notes WHERE uid=${uid}`)
 	callback(rows)
 }
 
