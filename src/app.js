@@ -5,6 +5,7 @@ import bodyParser from 'koa-bodyparser'
 import cors from '@koa/cors'
 
 import Notes from './controllers/notes'
+import Users from './controllers/users'
 
 const app = new Koa()
 const router = new Router()
@@ -17,6 +18,7 @@ router.get('/', (ctx, next) => {
 })
 
 router.use('/notes', Notes.routes())
+router.use('/users', Users.routes())
 
 app.use(router.routes())
 

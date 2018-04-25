@@ -15,6 +15,7 @@ const getNotesForUser = async (uid, callback) => {
 	const db = await getDb()
 	const [rows, fields] = await db.execute(`SELECT id, content, page FROM notes WHERE uid=${uid}`)
 	callback(rows)
+	db.end()
 }
 
 const createNewNote = async (note, callback) => {
