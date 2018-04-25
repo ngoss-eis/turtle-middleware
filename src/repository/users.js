@@ -12,7 +12,7 @@ var getDb = async () => {
 
 const authenticateAsUser = async (uname, callback) => {
 	const db = await getDb()
-	const sqlQuery = `SELECT uid FROM users WHERE uname=${uname}`
+	const sqlQuery = `SELECT * FROM users WHERE uname="${uname}"`
 	const [rows, fields] = await db.execute(sqlQuery)
 	callback(rows)
 }
