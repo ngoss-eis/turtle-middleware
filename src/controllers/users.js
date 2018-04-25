@@ -4,13 +4,13 @@ import db from '../repository/users'
 const userRouter = new Router()
 
 
-notesRouter.get('/login', async (ctx, next) => {
+userRouter.get('/login', async (ctx, next) => {
 	await db.authenticateAsUser(ctx.request.query.user, (results) => {
 		ctx.body = results
 	})
 })
 
-notesRouter.post('/create', async (ctx, next) => {
+userRouter.post('/create', async (ctx, next) => {
 	return await db.createUser(
 		{
 			uname: ctx.request.body.uname,
@@ -23,7 +23,7 @@ notesRouter.post('/create', async (ctx, next) => {
 	)
 })
 
-notesRouter.put('/update', async (ctx, next) => {
+userRouter.put('/update', async (ctx, next) => {
 	await db.updateUser(
 		{
 			id: ctx.request.body.id,
@@ -37,4 +37,4 @@ notesRouter.put('/update', async (ctx, next) => {
 	)
 })
 
-export default notesRouter
+export default userRouter
