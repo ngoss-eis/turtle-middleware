@@ -1,5 +1,5 @@
 {
-  "name": "viewer-pers-middleware",
+  "name": "turtle-middleware",
   "description": "",
   "version": "1.0.1",
   "main": "src/app.js",
@@ -27,7 +27,7 @@
     "koa": "^2.5.0",
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.4.0",
-    "mysql2": "^1.5.3",
+    "mssql": "^4.2.1",
     "npm": "^5.8.0"
   }
 }
