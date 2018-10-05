@@ -26,10 +26,11 @@ const addTurtleWithDetails = async (data, callback) => {
 
 		const result = await pool.request().query(sqlQuery)
 
+		sql.close()
 		callback(200)
-		pool.close()
 	} catch (err) {
 		console.log(err)
+		sql.close()
 		callback(400)
 	}
 }
@@ -42,10 +43,11 @@ const getAllTurtles = async (callback) => {
 
 		const result = await pool.request().query(sqlQuery)
 
-		pool.close()
+		sql.close()
 		callback(result.recordset, 200)
 	} catch (err) {
 		console.log(err)
+		sql.close()
 		callback(null, 400)
 	}
 	const sqlQuery = 'SELECT * FROM turtles'
